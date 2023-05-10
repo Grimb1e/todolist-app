@@ -22,6 +22,10 @@ git clone https://github.com/Grimb1e/todolist-app.git
 
 To use the Todo app, open **index.html** in your web browser.
 
+Alternatively, you can also access the app online at:
+
+https://todolist-app-cyan.vercel.app/
+
 This project includes the following programming languages:
 
     HTML
