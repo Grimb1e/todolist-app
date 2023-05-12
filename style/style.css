@@ -5,9 +5,10 @@
   padding: 0;
 }
 
-/* Set background color */
+/* Set black background color */
 body {
-  background-color: #f7f7f7;
+  background-color: black;
+  color: #f7f7f7;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -34,12 +35,14 @@ input[type="text"] {
   border-radius: 0.25rem;
   margin-right: 1rem;
   font-size: 1rem;
+  background-color: #222;
+  color: #f7f7f7;
 }
 
 button[type="submit"] {
   padding: 1rem 2rem;
   border: none;
-  background-color: #4caf50;
+  background-color: #0077C2;
   color: white;
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -47,8 +50,10 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   cursor: pointer;
-  background-color: #2e8b57;
+  background-color: #005BA8;
 }
+
+
 
 /* Style the todo list */
 #todo-list {
@@ -63,7 +68,7 @@ button[type="submit"]:hover {
   align-items: center;
   padding: 1rem;
   margin-bottom: 0.5rem;
-  background-color: white;
+  background-color: #222;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -76,13 +81,14 @@ button[type="submit"]:hover {
   flex: 1;
   margin-right: 1rem;
   font-size: 1rem;
+  color: #f7f7f7;
 }
 
 #todo-list li button {
   padding: 0.5rem 1rem;
   border: none;
   background-color: #f44336;
-  color: white;
+  color: #f7f7f7;
   border-radius: 0.25rem;
   font-size: 1rem;
 }
@@ -104,11 +110,14 @@ button[type="submit"]:hover {
 
   input[type="text"] {
     margin-right: 0;
+    width: 90%;
+    margin: 0 auto;
     margin-bottom: 1rem;
   }
 
   button[type="submit"] {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     margin-top: 1rem;
   }
 
@@ -116,4 +125,3 @@ button[type="submit"]:hover {
     margin: 2rem 1rem;
   }
 }
-  
