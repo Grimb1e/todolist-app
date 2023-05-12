@@ -38,7 +38,12 @@ const renderTools = () => {
 };
 
 window.onload = () => {
-  todos = JSON.parse(localStorage.getItem("todos")) || [];
+  const storedTodos = localStorage.getItem("todos");
+  if (storedTodos !== null) {
+    todos = JSON.parse(storedTodos);
+  } else {
+    todos = [];
+  }
   renderTools();
 };
 
