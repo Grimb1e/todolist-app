@@ -7,12 +7,14 @@ const todoList = document.getElementById("todo-list");
 
 const formHandler = (e) => {
   e.preventDefault();
-  todos.unshift({
-    id: new Date().getTime().toString(),
-    text: input.value,
-  });
+  if (input.value !== "") {
+    todos.unshift({
+      id: new Date().getTime().toString(),
+      text: input.value,
+    });
   input.value = "";
   renderTools();
+  };
 };
 
 const deleteTodo = (id) => {
