@@ -5,8 +5,6 @@ const input = document.querySelector("input");
 const addbutton = document.querySelector("button");
 const todoList = document.getElementById("todo-list");
 
-todos = JSON.parse(localStorage.getItem("todos"));
-
 const formHandler = (e) => {
   e.preventDefault();
   if (input.value !== "") {
@@ -39,6 +37,9 @@ const renderTools = () => {
   });
 };
 
-renderTools();
+window.onload = () => {
+  todos = JSON.parse(localStorage.getItem("todos"));
+  renderTools();
+};
 
 form.addEventListener("submit", formHandler);
