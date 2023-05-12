@@ -1,31 +1,32 @@
-/* Reset default styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Set black background color */
 body {
   background-color: black;
   color: #f7f7f7;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Style the heading */
 h1 {
   margin: 2rem;
   text-align: center;
   font-size: 2.5rem;
 }
 
-/* Style the form */
 form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
   max-width: 600px;
+  border-radius: 0.25rem;
+  background-color: #222;
+  padding: 1rem;
 }
 
 input[type="text"] {
@@ -37,6 +38,8 @@ input[type="text"] {
   font-size: 1rem;
   background-color: #222;
   color: #f7f7f7;
+  border-radius: 0.25rem;
+  outline: none;
 }
 
 button[type="submit"] {
@@ -46,6 +49,7 @@ button[type="submit"] {
   color: white;
   border-radius: 0.25rem;
   font-size: 1rem;
+  border-radius: 0.25rem;
 }
 
 button[type="submit"]:hover {
@@ -53,9 +57,6 @@ button[type="submit"]:hover {
   background-color: #005BA8;
 }
 
-
-
-/* Style the todo list */
 #todo-list {
   list-style: none;
   margin: 2rem auto;
@@ -98,26 +99,22 @@ button[type="submit"]:hover {
   background-color: #d32f2f;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
   }
 
   form {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   } 
 
   input[type="text"] {
-    margin-right: 0;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     margin-bottom: 1rem;
   }
 
   button[type="submit"] {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     margin-top: 1rem;
   }
 

@@ -5,6 +5,8 @@ const input = document.querySelector("input");
 const addbutton = document.querySelector("button");
 const todoList = document.getElementById("todo-list");
 
+todos = JSON.parse(localStorage.getItem("todos"));
+
 const formHandler = (e) => {
   e.preventDefault();
   if (input.value !== "") {
@@ -12,15 +14,17 @@ const formHandler = (e) => {
       id: new Date().getTime().toString(),
       text: input.value,
     });
-  input.value = "";
-  renderTools();
-  };
+    input.value = "";
+    localStorage.setItem("todos", JSON.stringify(todos));
+    renderTools();
+  }
 };
 
 const deleteTodo = (id) => {
-  todos = todos.filter(todo => todo.id !== id);
+  todos = todos.filter((todo) => todo.id !== id);
+  localStorage.setItem("todos", JSON.stringify(todos));
   renderTools();
-}
+};
 
 const renderTools = () => {
   todoList.innerHTML = "";
@@ -35,5 +39,6 @@ const renderTools = () => {
   });
 };
 
+renderTools();
 
 form.addEventListener("submit", formHandler);
